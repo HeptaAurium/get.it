@@ -5,8 +5,11 @@
                 <a href="#" class="btn circle rounded-circle flex-center mx-1 mx-md-3">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="btn circle rounded-circle flex-center mx-1 mx-md-3">
+                <a href="https://wa.me/c/254796613052" target="_blank" class="btn circle rounded-circle flex-center mx-1 mx-md-3">
                     <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a> 
+                <a href="tel: +254796613052" target="_blank" class="btn circle rounded-circle flex-center mx-1 mx-md-3">
+                   <i class="fa fa-phone" aria-hidden="true"></i>
                 </a>
             </div>
             <div class="text-center ml-auto mr-auto d-none d-md-flex">

@@ -66,7 +66,7 @@ hr.hr-slim {
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .showcase-universal .scroll-buttons button {
@@ -160,6 +160,7 @@ hr.hr-slim {
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
+  z-index: 1000;
 }
 
 .showcase-universal .showcase-outer .showcase .content {
@@ -167,6 +168,7 @@ hr.hr-slim {
   top: 30%;
   left: 20%;
   height: 100%;
+  z-index: 1000;
 }
 
 .showcase-universal .showcase-outer .showcase .content h1.non-display {
@@ -195,6 +197,7 @@ hr.hr-slim {
 .welcome-nav {
   padding: .9rem 1rem .4rem;
   width: 100%;
+  z-index: 1000 !important;
 }
 
 .welcome-nav a.btn.circle {
@@ -229,12 +232,14 @@ hr.hr-slim {
   position: relative;
 }
 
-.products .arrivals .prod-header {
+.products .arrivals .prod-header,
+.products .picks .prod-header {
   font-family: 'Redressed', cursive;
   text-align: center;
 }
 
-.products .arrivals .prod-header::after {
+.products .arrivals .prod-header::after,
+.products .picks .prod-header::after {
   content: "";
   display: block;
   height: 16px;
@@ -245,11 +250,12 @@ hr.hr-slim {
   border-bottom-left-radius: 10px;
 }
 
-.products .arrivals .card {
+.products .arrivals .card,
+.products .picks .card {
   border: none;
   outline: none;
   border-radius: 16px;
-  height: 520px;
+  height: 480px;
   -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
   cursor: pointer;
@@ -264,7 +270,8 @@ hr.hr-slim {
   margin: 20px auto;
 }
 
-.products .arrivals .card:hover {
+.products .arrivals .card:hover,
+.products .picks .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-transition: -webkit-transform .3s;
@@ -275,7 +282,8 @@ hr.hr-slim {
           box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
-.products .arrivals .card .product {
+.products .arrivals .card .product,
+.products .picks .card .product {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -285,15 +293,54 @@ hr.hr-slim {
 }
 
 .products .arrivals .card .product .info,
-.products .arrivals .card .product .cost {
+.products .arrivals .card .product .cost,
+.products .picks .card .product .info,
+.products .picks .card .product .cost {
   position: relative;
   top: 60%;
 }
 
-.products .arrivals .card .product .prod-name {
+.products .arrivals .card .product .prod-name,
+.products .picks .card .product .prod-name {
   padding: 10px auto;
   font-family: 'Lobster', cursive;
   font-size: 2rem;
+}
+
+.products .arrivals .btn-link,
+.products .picks .btn-link {
+  padding: 10px;
+  font-size: 2.4rem;
+  float: inline-end;
+}
+
+.catalogue .display-4 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin: 20px auto;
+}
+
+.catalogue .display-4::after {
+  content: "";
+  display: block;
+  height: 16px;
+  background: rgba(11, 207, 93, 0.753);
+  width: 80px;
+  margin: 2px auto;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.catalogue span {
+  font-size: 1.4rem;
+  margin: .5rem;
+  font-family: 'Abril Fatface', cursive;
+  text-transform: uppercase;
+  word-spacing: 1px;
+}
+
+.catalogue .clear {
+  padding: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -360,6 +407,7 @@ hr.hr-slim {
   }
   .welcome-nav {
     padding: .4rem .5rem;
+    z-index: 100000000 !important;
   }
   .welcome-nav a.btn.circle {
     border: 2px solid #f9f9f9;
@@ -374,6 +422,12 @@ hr.hr-slim {
   .welcome-nav a.btn.right .fa,
   .welcome-nav a.btn.right .fab {
     font-size: 1.4rem;
+  }
+  .products .arrivals .prod-header {
+    font-size: 1.8em;
+  }
+  .catalogue .display-4 {
+    font-size: 1.8rem;
   }
 }
 
