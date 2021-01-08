@@ -1,0 +1,180 @@
+body {
+    min-height: 100vh;
+    background: #020005;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr.hr-slim {
+    border-top: 1px solid #fff;
+    margin: .2rem auto;
+    width: 98%;
+    clear: both;
+}
+
+.showcase-universal {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    top:0;
+
+    .scroll-buttons{
+        position: absolute;
+    }
+
+    .one {
+        background: #020005 url('../img/front/imani-bahati-LxVxPA1LOVM-unsplash\ \(1\).jpg') no-repeat center center;
+    }
+
+    .showcase-outer {
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100%;
+
+        .showcase {
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+
+            .content {
+                position: relative;
+                top: 75%;
+                left: 20px;
+                height: 100%;
+
+                h1.non-display {
+                    font-size: 12px;
+                    font-weight: bold;
+                    font-family: 'Redressed', cursive;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                button {
+                    background: orangered;
+                    border-radius: 20px;
+                    margin-top: 50px;
+                    padding: 12px;
+                    color: #fff;
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+}
+
+.welcome-nav {
+    padding: .9rem 1rem .4rem;
+    width: 100%;
+
+    a.btn.circle {
+        border: 2px solid #f9f9f9;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .fa,
+    .fab {
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    a.btn.right {
+
+        .fa,
+        .fab {
+            font-size: 2rem;
+        }
+    }
+
+    .nav-2 {
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+
+            &:hover {
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    border-bottom: 2px solid #fff;
+                    padding: 4px;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+
+
+
+    }
+}
+
+@media (max-width:576px) {
+    .welcome-nav {
+        padding: .4rem .5rem;
+
+        a.btn.circle {
+            border: 2px solid #f9f9f9;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .fa,
+        .fab {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        a.btn.right {
+
+            .fa,
+            .fab {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width:400px) {
+    .welcome-nav {
+        padding: .3rem 0;
+
+        a.btn.circle {
+            border: 1px solid #f9f9f9;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        .fa,
+        .fab {
+            font-size: .6rem;
+            color: #fff;
+        }
+
+        a.btn.right {
+
+            .fa,
+            .fab {
+                font-size: .8rem;
+            }
+        }
+    }
+
+}
