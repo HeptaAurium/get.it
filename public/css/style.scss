@@ -332,14 +332,12 @@ hr.hr-slim {
 
     span {
         font-size: 1.4rem;
-        margin: .5rem;
+        margin: .1rem;
         font-family: 'Abril Fatface', cursive;
         text-transform: uppercase;
         word-spacing: 1px;
     }
-    .clear{
-        padding: 10px;
-    }
+   
 }
 
 @media (max-width:1024px) {
@@ -472,6 +470,9 @@ hr.hr-slim {
     .catalogue {
         .display-4 {
             font-size: 1.8rem;
+        }
+        span{
+            font-size: .9rem;
         }
     }
 }
