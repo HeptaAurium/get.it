@@ -8,7 +8,7 @@
         <div class="products padding">
             <div class="arrivals">
                 <h2 class="display-3 prod-header">New Arrivals</h2>
-                <div class="py-5 px-5">
+                <div class="py-5 px-md-5">
                     <div class="row">
                         <div class="col-xs-12 col-md-6 col-lg-3">
                             <div class="card" style="background:url('{{ asset('img/catalogue/1004.jpg') }}')">
@@ -85,7 +85,7 @@
             </div>
             <div class="picks">
                 <h2 class="display-3 prod-header">Top Picks</h2>
-                <div class="py-5 px-5">
+                <div class="py-5 px-md-5">
                     <div class="row">
                         <div class="col-xs-12 col-md-6 col-lg-3">
                             <div class="card" style="background:url('{{ asset('img/catalogue/1004.jpg') }}')">
