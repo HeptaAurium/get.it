@@ -1,10 +1,18 @@
 body {
   min-height: 100vh;
-  background: #020005;
-  color: #fff;
+  background: #c2c2c2;
+  color: #2e2e2e;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+.padding {
+  padding-bottom: 2rem !important;
+}
+
+.fade {
+  opacity: 1;
 }
 
 /* Scroll bars */
@@ -142,7 +150,7 @@ hr.hr-slim {
 
 .showcase-universal .showcase-outer {
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   height: 100%;
   overflow: hidden;
   display: none;
@@ -168,7 +176,7 @@ hr.hr-slim {
 }
 
 .showcase-universal .showcase-outer .showcase .content p {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .showcase-universal .showcase-outer .showcase .content button {
@@ -221,6 +229,98 @@ hr.hr-slim {
   position: relative;
 }
 
+.products .arrivals .prod-header {
+  font-family: 'Redressed', cursive;
+  text-align: center;
+}
+
+.products .arrivals .prod-header::after {
+  content: "";
+  display: block;
+  height: 16px;
+  background: rgba(11, 207, 93, 0.753);
+  width: 80px;
+  margin: 2px auto;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.products .arrivals .card {
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  height: 520px;
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  padding: 0 0 10px 0 !important;
+  background: #949596;
+  color: #fff;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  position: relative;
+  margin: 20px auto;
+}
+
+.products .arrivals .card:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.products .arrivals .card .product {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.products .arrivals .card .product .info,
+.products .arrivals .card .product .cost {
+  position: relative;
+  top: 60%;
+}
+
+.products .arrivals .card .product .prod-name {
+  padding: 10px auto;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .showcase-outer .showcase .content {
+    position: relative;
+    top: 30%;
+    left: 50px !important;
+  }
+  .showcase-outer .showcase .content h1.non-display {
+    font-size: 8px;
+    font-weight: bold;
+    font-family: 'Redressed', cursive;
+  }
+  .showcase-outer .showcase .content .display {
+    font-size: 2.4rem;
+  }
+  .showcase-outer .showcase .content p {
+    font-size: 16px;
+  }
+  .showcase-outer .showcase .content button .btnNext {
+    right: 0 !important;
+  }
+  .showcase-outer .showcase .content button .btnPrev {
+    left: 0 !important;
+  }
+}
+
 @media (max-width: 576px) {
   .showcase-universal .scroll-buttons button {
     top: 45%;
@@ -240,7 +340,7 @@ hr.hr-slim {
   .showcase-universal .showcase-outer .showcase .content {
     position: relative;
     top: 10%;
-    left: 10px;
+    left: 10px !important;
   }
   .showcase-universal .showcase-outer .showcase .content h1.non-display {
     font-size: 8px;
@@ -251,15 +351,12 @@ hr.hr-slim {
     font-size: 2.4rem;
   }
   .showcase-universal .showcase-outer .showcase .content p {
-    font-size: 12px;
+    font-size: 14px !important;
   }
   .showcase-universal .showcase-outer .showcase .content button {
-    background: orangered;
-    border-radius: 20px;
-    margin-top: 50px;
-    padding: 12px;
-    color: #fff;
-    width: 50%;
+    border-radius: 14px !important;
+    width: 200px !important;
+    margin-top: 70px !important;
   }
   .welcome-nav {
     padding: .4rem .5rem;
@@ -297,6 +394,9 @@ hr.hr-slim {
   .welcome-nav a.btn.right .fa,
   .welcome-nav a.btn.right .fab {
     font-size: .8rem;
+  }
+  .indicators {
+    display: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
