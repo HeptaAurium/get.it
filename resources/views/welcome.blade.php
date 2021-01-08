@@ -10,7 +10,7 @@
                 <h2 class="display-3 prod-header">New Arrivals</h2>
                 <div class="py-5 px-5">
                     <div class="row">
-                        <div class="col-xs-6 col-md-3">
+                        <div class="col-xs-12 col-md-3">
                             <div class="card" style="background:url('{{ asset('img/catalogue/1004.jpg') }}')">
                                 <div class="product align-items-center p-2 text-center">
                                     {{-- <img src="{{ asset('img/catalogue/1001.jpg') }}"
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-6 col-md-3">
+                        <div class="col-xs-12 col-md-3">
                             <div class="card" style="background:url('{{ asset('img/catalogue/1006.jpg') }}')">
                                 <div class="product align-items-center p-2 text-center">
                                     {{-- <img src="{{ asset('img/catalogue/1001.jpg') }}"
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-6 col-md-3">
+                        <div class="col-xs-12 col-md-3">
                             <div class="card" style="background:url('{{ asset('img/catalogue/1005.jpg') }}')">
                                 <div class="product align-items-center p-2 text-center">
                                     {{-- <img src="{{ asset('img/catalogue/1001.jpg') }}"

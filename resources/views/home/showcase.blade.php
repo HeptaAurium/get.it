@@ -55,9 +55,9 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="content d-flex flex-column">
-                                <h1 class='non-diplay'>SNEAKERS</h1>
-                                <h3 class="display display-4">Kicks for Cliques</h3>
-                                <P>
+                                <h1 class='non-diplay text-white'>SNEAKERS</h1>
+                                <h3 class="display display-4 text-white">Kicks for Cliques</h3>
+                                <P class="text-white    ">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro eveniet
                                     cupiditate suscipit commodi ipsam, rem illum necessitatibus atque, qui perferendis
                                     laboriosam eum nesciunt reprehenderit? Id nostrum iusto eligendi quidem.
