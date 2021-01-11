@@ -1,4 +1,4 @@
-<div class="showcase-universal mb-4">
+<div class="showcase-universal">
     <div class="scroll-buttons">
         <button class="btn btnNext flex-center">
             <i class="fa fa-angle-right" aria-hidden="true"></i>

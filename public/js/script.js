@@ -27,25 +27,77 @@ $(document).ready(function () {
         $(next).addClass('active').fadeIn('300');
     }
 
-});
+    // Products sliding
 
-$(window).on("load",function() {
-    $(window).scroll(function() {
-      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".fade").each(function() {
-        /* Check the location of each desired element */
-        var objectBottom = $(this).offset().top + $(this).outerHeight();
+    // Arrivals
 
-        /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-          if ($(this).css("opacity")==0) {$(this).fadeTo(300,1);}
-        } else { //object goes out of view (scrolling up)
-          if ($(this).css("opacity")==1) {$(this).fadeTo(300,0);}
+    $('button#arrivalsNext').click(function (e) {
+        e.preventDefault();
+        var margin = $('div.arrivals').css('margin-left'), nw;
+
+        margin = margin.replace('px', '');
+        margin = Number(margin);
+        nw = margin - 300;
+
+        if (nw < -1963) {
+            nw = -1963;
+        } else {
+            slide($('div.arrivals'), nw);
         }
-      });
-    }).scroll(); //invoke scroll-handler on page-load
-  });
 
+    });
+    $('button#arrivalsPrev').click(function (e) {
+        e.preventDefault();
+        var margin = $('div.arrivals').css('margin-left');
+        var nw;
+
+        margin = margin.replace('px', '');
+        margin = Number(margin);
+        nw = margin + 300;
+
+        if (nw > 0) {
+            slide($('div.arrivals'), '0');
+        } else {
+            slide($('div.arrivals'), nw);
+        }
+    });
+    // Picks
+    $('button#picksNext').click(function (e) {
+        e.preventDefault();
+        var margin = $('div.picks').css('margin-left'), nw;
+
+        margin = margin.replace('px', '');
+        margin = Number(margin);
+        nw = margin - 300;
+
+        if (nw < -1963) {
+            nw = -1963;
+        } else {
+            slide($('div.picks'), nw);
+        }
+
+    });
+    $('button#picksPrev').click(function (e) {
+        e.preventDefault();
+        var margin = $('div.picks').css('margin-left');
+        var nw;
+
+        margin = margin.replace('px', '');
+        margin = Number(margin);
+        nw = margin + 300;
+
+        if (nw > 0) {
+            slide($('div.picks'), '0');
+        } else {
+            slide($('div.picks'), nw);
+        }
+    });
+
+    function slide(div, margin) {
+        $(div).css('margin-left', margin + 'px');
+    }
+
+});
 
 
 
