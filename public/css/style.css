@@ -438,7 +438,7 @@ hr.hr-slim {
   -webkit-transition: 1s ease;
   transition: 1s ease;
   min-width: 3520px;
-  margin-left: -40px;
+  margin-left: -16px;
 }
 
 .products .arrivals .card,
@@ -685,6 +685,11 @@ hr.hr-slim {
   .showcase-outer .showcase .content button .btnPrev {
     left: 0 !important;
   }
+  .products .prod-buttons .btn-prod {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -742,8 +747,13 @@ hr.hr-slim {
   .welcome-nav a.btn.right .fab {
     font-size: 1.4rem;
   }
-  .products .arrivals .prod-header {
+  .products .prod-header {
     font-size: 1.8em;
+  }
+  .products .prod-buttons .btn-prod {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
   }
   .catalogue .display-4 {
     font-size: 1.8rem;

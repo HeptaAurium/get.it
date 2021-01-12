@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         margin = margin.replace('px', '');
         margin = Number(margin);
-        nw = margin - 300;
+        nw = margin - 320;
 
         if (nw < -1963) {
             nw = -1963;
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
         margin = margin.replace('px', '');
         margin = Number(margin);
-        nw = margin + 300;
+        nw = margin + 320;
 
         if (nw > 0) {
             slide($('div.arrivals'), '0');
@@ -68,7 +68,7 @@ $(document).ready(function () {
 
         margin = margin.replace('px', '');
         margin = Number(margin);
-        nw = margin - 300;
+        nw = margin - 320;
 
         if (nw < -1963) {
             nw = -1963;
@@ -84,7 +84,7 @@ $(document).ready(function () {
 
         margin = margin.replace('px', '');
         margin = Number(margin);
-        nw = margin + 300;
+        nw = margin + 320;
 
         if (nw > 0) {
             slide($('div.picks'), '0');
