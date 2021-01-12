@@ -11,5 +11,6 @@
     @include('home.showcase')
     @include('home.products')
     @include('home.jumbotron')
+    @include('layouts.extras.tawk')
     @include('layouts.navs.footer')
 @endsection
