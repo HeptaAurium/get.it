@@ -33,14 +33,14 @@
       </div>
       <div class="container-fluid mb-3">
           <div class="row">
-              <div class="col-md-8 col-sm-6 col-xs-12">
+              <div class="col-md-8 col-sm-6 col-xs-12 mb-3">
                   <p class="copyright-text">Copyright &copy; <?php echo Date('Y'); ?> All
                       Rights Reserved by
                       <a href="/">{{ config('app.name') }}</a>.
                   </p>
               </div>
 
-              <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
                   <ul class="social-icons">
                       <li><a class="phone" href="tel: +254-796613491"><i class="fa fa-phone"></i></a></li>
                       <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
