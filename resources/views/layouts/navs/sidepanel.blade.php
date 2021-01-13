@@ -1,14 +1,19 @@
 <?php
-$allProducts = \App\Helpers\GeneralHelper::get_all_products();
-$allCategories = \App\Helpers\GeneralHelper::get_all_categories();
-$allBrands = \App\Helpers\GeneralHelper::get_all_brands();
+$allProducts = \App\Helpers\GeneralHelper::get_all_products(10);
+$allCategories = \App\Helpers\GeneralHelper::get_all_categories(10);
+$allBrands = \App\Helpers\GeneralHelper::get_all_brands(10);
 ?>
-<button class="expand-side">
+<button class="expand-side flex-center" title="Toggle minified view" data-toggle="tooltip">
     <i class="fa fa-caret-left" aria-hidden="true"></i>
 </button>
 <nav class="search-side-bar  padding">
     <div class="container-fluid">
-        <h5 class="display-4 ssb-header pl-4">Get it all</h5>
+        <div class="logo flex-center">
+            <img class="img-responsive" style="height:80px;" src="{{ asset('img/icons/logo-clear.png') }}"
+            alt="">
+            <h5 class="display-4 ssb-header pl-4"> <span class="text-dark font-weight-bold" style="font-family: 'Sofia', cursive; font-size:36px;">{{ config('app.name') }}</span></h5>
+        </div>
+       
         <ul class="nav flex-column">
             <li class="nav-item ssb-li-parent">
                 <h5 class="display-4 ssb-header">Categories<i class="fa fa-caret-down float-right"

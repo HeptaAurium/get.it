@@ -225,15 +225,15 @@ nav.search-side-bar.slide {
 
 .expand-side {
   position: absolute;
-  top: 92%;
-  left: 220px;
+  top: 94%;
+  left: 252px;
   background: #26272b;
   color: #fff;
   /* padding: 1rem; */
-  font-size: 3rem;
+  font-size: 2rem;
   z-index: 9999999;
-  height: 5rem;
-  width: 5rem;
+  height: 3rem;
+  width: 3rem;
   -webkit-transition: all 1.2s;
   transition: all 1.2s;
 }

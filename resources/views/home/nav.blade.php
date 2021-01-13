@@ -16,7 +16,7 @@
                 <h3 class="display">
                     <img class="img-responsive" style="height:80px;" src="{{ asset('img/icons/logo-clear.png') }}"
                         alt="">
-                    {{ config('app.name') }}
+                    <span class="text-white" style="font-family: 'Sofia', cursive">{{ config('app.name') }}</span>
                 </h3>
             </div>
             <ul class="ml-md-auto d-flex mr-2">

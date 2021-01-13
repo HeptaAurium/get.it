@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="format-detection" content="telephone=no">
 
-    <title>{{  config('app.name', 'Laravel') }}</title>
+    <title style="font-family:Sofia">{{  config('app.name', 'Laravel') }}</title>
 
     @include('layouts.extras.css')
 </head>

@@ -19,18 +19,30 @@ class GeneralHelper
         return $img;
     }
 
-    static function get_all_products()
+    static function get_all_products($n)
     {
-        return Product::take(10)->get();
+        if ($n == 'all') {
+            return Product::get();
+        } else {
+            return Product::orderBy('click_count', 'DESC')->take($n)->get();
+        }
     }
 
-    static function get_all_categories()
+    static function get_all_categories($n)
     {
-        return Category::get();
+        if ($n == 'all') {
+            return Category::get();
+        } else {
+            return Category::orderBy('click_count', 'DESC')->take($n)->get();
+        }
     }
 
-    static function get_all_brands()
+    static function get_all_brands($n)
     {
-        return Brand::get();
+        if ($n == 'all') {
+            return Brand::get();
+        } else {
+            return Brand::orderBy('click_count', 'DESC')->take($n)->get();
+        }
     }
 }
