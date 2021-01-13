@@ -97,6 +97,14 @@ $(document).ready(function () {
         $(div).css('margin-left', margin + 'px');
     }
 
+    // expand side panel
+    $('button.expand-side').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('min');
+        $('.clear-left').toggleClass('clear');
+        $('.search-side-bar').toggleClass('slide');
+    });
+
 });
 
 

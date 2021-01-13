@@ -15,6 +15,16 @@ body {
     opacity: 1;
 }
 
+.stars {
+    .fa-star {
+        color: #ddd;
+    }
+
+    .fa-star.active {
+        color: orange;
+    }
+}
+
 /* Scroll bars */
 ::-webkit-scrollbar {
     width: 4px;
@@ -179,10 +189,7 @@ body {
     background-color: #ea4c89
 }
 
-
-// 
-
-
+// Universals
 .flex-center {
     display: flex;
     justify-content: center;
@@ -195,6 +202,107 @@ hr.hr-slim {
     width: 98%;
     clear: both;
 }
+
+//
+/* Search result side bar */
+.search-side-bar {
+    width: 300px;
+    float: left;
+    background: #dedede;
+    padding: 10px;
+    text-align: left;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    overflow-y: auto;
+    transition: all 1.2s;
+    z-index: 100000;
+}
+
+nav.search-side-bar.slide {
+    margin-left: -300px !important;
+}
+
+.expand-side {
+    position: absolute;
+    top: 92%;
+    left: 220px;
+    background: #26272b;
+    color: #fff;
+    /* padding: 1rem; */
+    font-size: 3rem;
+    z-index: 9999999;
+    height: 5rem;
+    width: 5rem;
+    transition: all 1.2s;
+}
+.expand-side.min {
+    left: 0 !important;
+    transform: rotate(-180deg);
+}
+.btn-expand-ssb {
+    display: none;
+    position: fixed;
+    left: 0;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 5px;
+    transform: all .6s;
+    outline: none;
+    z-index: 10000;
+}
+
+.btn-expand-ssb:hover {
+    font-size: 1.5rem;
+    outline: none;
+    transition: all .6s;
+}
+
+.btn-expand-ssb {
+    background: transparent;
+}
+
+.ssb-li-parent {
+    background: #d7d7d7;
+    margin: 10px;
+}
+
+.ssb-header {
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ssb-li {
+    margin: 10px;
+
+}
+
+.ssb-li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 11px;
+}
+
+.ssb-ul {
+    background: #eee;
+    padding: 10px 16px;
+}
+
+.clear-left {
+    margin-left: 300px;
+    width: calc(100vw - 300px);
+    transition: 1.2s;
+    min-height: 100vh;
+    // background-color: red;
+}
+
+.clear-left.clear {
+    margin-left: 00px !important;
+    width: 100vw !important;
+}
+
+// Homepage
 
 .showcase-universal {
     height: 100vh;
@@ -653,6 +761,17 @@ hr.hr-slim {
                 font-size: 2.8rem;
             }
         }
+    }
+}
+
+@media (max-width:768px) {
+    .clear-left {
+        margin-left: 0 !important;
+        width: 100vw !important;
+    }
+
+    .search-side-bar {
+        left: -300px !important;
     }
 }
 
