@@ -1,10 +1,11 @@
   <!-- Site footer -->
-  <footer class="site-footer px-5">
+  <footer class="site-footer px-2 px-md-4 px-lg-5">
       <div class="container-fluid">
           <div class="row">
               <div class="col-sm-12 col-md-6">
                   <h6>About</h6>
-                  <p class="text-justify">{{ config('app.name') }} is an online store based in Kenya, dealing with a
+                  <p class="text-justify"> <span class="logo-text">{{ config('app.name') }}</span> is an online store
+                      based in Kenya, dealing with a
                       wide range of products from footwear, carpets, household items e.t.c. We are committed to
                       providing our clients with great quality products all at an affordable price.
                   </p>
@@ -36,7 +37,7 @@
               <div class="col-md-8 col-sm-6 col-xs-12 mb-3">
                   <p class="copyright-text">Copyright &copy; <?php echo Date('Y'); ?> All
                       Rights Reserved by
-                      <a href="/">{{ config('app.name') }}</a>.
+                      <a href="/"><span class="logo-text">{{ config('app.name') }}</span></a>.
                   </p>
               </div>
 

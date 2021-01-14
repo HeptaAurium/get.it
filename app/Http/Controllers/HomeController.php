@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -34,8 +36,22 @@ class HomeController extends Controller
     {
         $data = [];
         $product = Product::where('id', $id)->first();
+        $colors = $product->colors;
+        $colors = explode(',', $colors);
+        $data['colors'] = [];
+
+        foreach ($colors as  $value) {
+            $array = [
+                'id' => $value,
+                'name' => DB::table('product_attribute_values')->where('id', $value)->pluck('value')->first(),
+                'hex' => DB::table('product_attribute_values')->where('id', $value)->pluck('hex_val')->first(),
+            ];
+            array_push($data['colors'], $array);
+        }
 
         $data['product'] = $product;
+        $data['images'] = DB::table('product_images')->where('products_id', $id)->get();
+        $data['brand'] = Brand::where('id', $product->brands_id)->pluck('name')->first();
 
         return view('products.view', $data);
     }

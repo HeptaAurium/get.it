@@ -8,12 +8,13 @@ $allBrands = \App\Helpers\GeneralHelper::get_all_brands(10);
 </button>
 <nav class="search-side-bar  padding">
     <div class="container-fluid">
-        <div class="logo flex-center">
-            <img class="img-responsive" style="height:80px;" src="{{ asset('img/icons/logo-clear.png') }}"
-            alt="">
-            <h5 class="display-4 ssb-header pl-4"> <span class="text-dark font-weight-bold" style="font-family: 'Sofia', cursive; font-size:36px;">{{ config('app.name') }}</span></h5>
-        </div>
-       
+        <a href="/" class="btn">
+            <div class="logo flex-center">
+                <img class="img-responsive" style="height:80px;" src="{{ asset('img/icons/logo-clear.png') }}" alt="">
+                <h5 class="display-4 ssb-header pl-4 logo-text" style="font-size:36px !important;"> <span class="text-dark font-weight-bold"
+                        >{{ config('app.name') }}</span></h5>
+            </div>
+        </a>
         <ul class="nav flex-column">
             <li class="nav-item ssb-li-parent">
                 <h5 class="display-4 ssb-header">Categories<i class="fa fa-caret-down float-right"

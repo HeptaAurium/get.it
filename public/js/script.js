@@ -105,6 +105,27 @@ $(document).ready(function () {
         $('.search-side-bar').toggleClass('slide');
     });
 
+    $('span.span-input').click(function () {
+        $('span.span-input').removeClass('active');
+        $(this).toggleClass('active');
+    });
+    $('span.span-colors').click(function () {
+        $('span.span-colors').removeClass('active');
+        $(this).toggleClass('active');
+    });
+
+    $('button#btnAddCart').click(function (e) {
+        e.preventDefault();
+        $(this).html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Adding...");
+        $(this).prop('disabled', true);
+        setTimeout(() => {
+            $(this).prop('disabled', false);
+            $(this).css('background', '').addClass('bg-success');
+            $(this).html('<i class="fas fa-check"></i> Product added to cart');
+        }, 2000);
+
+    });
+
 });
 
 

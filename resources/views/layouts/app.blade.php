@@ -9,16 +9,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="format-detection" content="telephone=no">
-
-    <title style="font-family:Sofia">{{  config('app.name', 'Laravel') }}</title>
-
     @include('layouts.extras.css')
+    <title> @yield('title') | {{ config('app.name', 'Laravel') }}</title>
+
 </head>
 
 <body>
     <div id="app">
         <main class="main">
-            {{-- @include('layouts.navs.nav') --}}
+            @include('layouts.navs.nav')
             @yield('content')
         </main>
     </div>
