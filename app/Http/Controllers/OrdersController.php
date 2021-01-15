@@ -150,4 +150,9 @@ class OrdersController extends Controller
         flash("Item removed from cart successfully")->success();
         return back();
     }
+
+    public function cart_count()
+    {
+        return GeneralHelper::items_in_cart_count();
+    }
 }

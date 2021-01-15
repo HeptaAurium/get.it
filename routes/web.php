@@ -26,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('move_images', [CronController::class, 'move_images']);
 Route::get('products/{name}/{id}', [HomeController::class, 'view']);
 Route::resource('orders', OrdersController::class);
+Route::get('/items/in/cart', [OrdersController::class, 'cart_count']);
