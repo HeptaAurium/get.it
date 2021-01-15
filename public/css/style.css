@@ -944,6 +944,8 @@ nav.search-side-bar.slide {
   background-repeat: no-repeat;
   background-position: center;
   background-origin: content-box;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
 .product-showcase .product-img-div .img-list {
@@ -951,8 +953,8 @@ nav.search-side-bar.slide {
 }
 
 .product-showcase .product-img-div .img-list img {
-  height: 100%;
-  width: 100%;
+  height: 160px;
+  width: 160px;
 }
 
 .product-showcase .span-input {
@@ -971,21 +973,25 @@ nav.search-side-bar.slide {
 .product-showcase .span-input.active {
   background: #0000ff;
   color: #fff;
+  -webkit-box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.2);
+  padding: 1.1rem;
 }
 
 .product-showcase .span-colors {
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3.7rem;
+  width: 3.7rem;
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
 .product-showcase .span-colors.active {
-  height: 4.5rem;
-  width: 4.5rem;
-  border: 2px solid #000fff;
+  height: 4rem;
+  width: 4rem;
+  -webkit-box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 .product-showcase .span-colors.active::after {

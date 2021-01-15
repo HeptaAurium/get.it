@@ -109,22 +109,68 @@ $(document).ready(function () {
     $('span.span-input').click(function () {
         $('span.span-input').removeClass('active');
         $(this).toggleClass('active');
+        var val = $(this).data('size');
+        $('input#inp-size').val("");
+        $('input#inp-size').val(val);
     });
     $('span.span-colors').click(function () {
         $('span.span-colors').removeClass('active');
         $(this).toggleClass('active');
+        var val = $(this).data('color');
+        $('input#inp-color').val("");
+        $('input#inp-color').val(val);
     });
 
     $('button#btnAddCart').click(function (e) {
         e.preventDefault();
+        var product_id = $('#product_id').val(), color=  $('input#inp-color').val(), size=$('input#inp-size').val(), quantity = $('#quantity').val(), guest = $('#guest').val();
+
+
         $(this).html("<span class='spinner-border spinner-border-sm' role='status' aria-hidden='true'></span> Adding...");
         $(this).prop('disabled', true);
-        setTimeout(() => {
-            $(this).prop('disabled', false);
-            $(this).css('background', '').addClass('bg-success');
-            $(this).html('<i class="fas fa-check"></i> Product added to cart');
-        }, 2000);
 
+        $.ajaxSetup({
+            headers: { 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }
+        });
+        $.ajax({
+            type: "post",
+            url: "/orders",
+            data: {
+                color: color,
+                size: size,
+                quantity: quantity,
+                guest: guest,
+                product: product_id,
+            },
+
+            success: function (response) {
+                var resp = JSON.parse(response);
+                if (resp.status == "success") {
+                    setTimeout(() => {
+                        $('button#btnAddCart').prop('disabled', false);
+                        $('button#btnAddCart').css('background', '').addClass('bg-success');
+                        $('button#btnAddCart').html('<i class="fas fa-check"></i> Product added to cart');
+                    }, 1000);
+
+                    window.setTimeout(function(){location.reload()},3000)
+                } else {
+                    setTimeout(() => {
+                        $('button#btnAddCart').prop('disabled', false);
+                        $('button#btnAddCart').css('background', '').addClass('bg-success');
+                        $('button#btnAddCart').html('<i class="fas fa-cancel"></i> Failed to add to cart! Try again');
+                    }, 2000);
+                }
+            }
+        });
+
+
+
+    });
+
+    $('.btn-change-disp').click(function (e) {
+        e.preventDefault();
+        var src = $(this).data('src');
+        $('div#display-img').fadeIn().css('background-image', 'url(' + src + ')');
     });
 
 });

@@ -13,13 +13,24 @@
         <div class="product-showcase p-1 pt-md-5">
             <div class="container">
                 <div class="row">
+                    @csrf
+                    <input type="hidden" name="" id="product_id" value="{{$product->id}}">
+                    <input type="hidden" name="" id="guest" value="@guest 1 @else 0 @endguest">
                     <div class="col-md-6 bg-transparent">
                         <div class="product-img-div p-0 m-0">
-                            <div class="display-img"
+                            <div class="display-img" id="display-img"
                                 style="background-image:url('{{ config('settings.catalogue_url') . $images[0]->storage_path }}')">
                             </div>
+                            @if(count($images)>1)
                             <div class="img-list list-inline row flex-row">
+                                @foreach ($images as $item)
+                                @php $src= config('settings.catalogue_url') . $item->storage_path   @endphp
+                                <a href="" class="btn btn-change-disp" data-src={{$src}}>
+                                    <img src="{{$src}}" alt="" class="img-thumbnail">
+                                </a>
+                                @endforeach
                             </div>
+                            @endif
                         </div>
                     </div>
 
@@ -75,6 +86,7 @@
                                     {{--
                                 </div> --}}
                             @endforeach
+                            <input type="hidden" name="" value="" id="inp-size">
                         </div>
                         @php endif; @endphp
                         @if (count($colors) > 0)
@@ -82,9 +94,10 @@
                             <div class="p-2 row h-auto">
                                 @foreach ($colors as $it)
                                     <div class="col-3">
-                                        <span class="span-colors @if($it['hex'] != '#fff') text-white @endif flex-center m-2" style="background:{{$it['hex']}};">
+                                        <span class="span-colors @if($it['hex'] != '#fff') text-white @endif flex-center m-2" style="background:{{$it['hex']}};" data-color="{{$it['id']}}">
                                         {{ ucfirst($it['name']) }}
                                         </span>
+                                        <input type="hidden" id="inp-color" value="">
                                     </div>
                                 @endforeach
                             </div>
@@ -106,6 +119,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

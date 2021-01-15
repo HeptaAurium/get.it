@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CronController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrdersController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
@@ -24,3 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('move_images', [CronController::class, 'move_images']);
 Route::get('products/{name}/{id}', [HomeController::class, 'view']);
+Route::resource('orders', OrdersController::class);
