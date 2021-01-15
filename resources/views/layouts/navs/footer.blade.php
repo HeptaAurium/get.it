@@ -43,7 +43,7 @@
 
               <div class="col-md-4 col-sm-6 col-xs-12 mb-3">
                   <ul class="social-icons">
-                      <li><a class="phone" href="tel: +254-796613491"><i class="fa fa-phone"></i></a></li>
+                      <li><a class="phone" href="tel: +254-796613052"><i class="fa fa-phone"></i></a></li>
                       <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
                       <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
                       <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>

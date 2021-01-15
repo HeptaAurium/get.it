@@ -910,7 +910,7 @@ nav.search-side-bar.slide {
     .span-input.active {
         background: #0000ff;
         color: #fff;
-        transform: rotateY(360deg);
+        // transform: rotateY(360deg);
     }
 
     .span-colors {
@@ -918,13 +918,13 @@ nav.search-side-bar.slide {
         height: 4rem;
         width: 4rem;
         cursor: pointer;
-        transition: 1s;
+        transition: .5s;
     }
 
     .span-colors.active {
         height: 4.5rem;
         width: 4.5rem;
-        transform: rotateY(360deg);
+        // transform: rotateY(360deg);
         border: 2px solid #000fff;
 
         &::after {
