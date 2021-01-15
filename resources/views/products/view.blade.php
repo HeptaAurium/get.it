@@ -97,7 +97,7 @@
                                         <input id="quantity" class="form-control" type="number" name="" min="0" value="1">
                                     </div>
                                     <div class="col-6">
-                                        <input id="quantity" class="form-control" type="number" name="" min="0" value="{{}}" readonly>
+                                        <input id="quantification" class="form-control" type="text" name="" min="0" value="{{ucfirst(\App\Helpers\GeneralHelper::get_attribute($product->quantification ))}}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-11 mx-auto my-3">

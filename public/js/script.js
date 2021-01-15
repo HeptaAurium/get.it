@@ -103,6 +103,7 @@ $(document).ready(function () {
         $(this).toggleClass('min');
         $('.clear-left').toggleClass('clear');
         $('.search-side-bar').toggleClass('slide');
+        $('.site-footer ').toggleClass('slide');
     });
 
     $('span.span-input').click(function () {

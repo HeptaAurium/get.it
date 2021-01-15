@@ -97,6 +97,7 @@
                 $img= \App\Helpers\GeneralHelper::get_product_img($item->id);
                 $rating= $item->rating;
                 @endphp
+                 <a href="/products/{{$item->name}}/{{$item->id}}">
                 <div class="prod">
                     <div class="card" style="background:url('{{ config('settings.catalogue_url') . $img }}')">
                         <div class="product align-items-center p-2 text-center">
@@ -149,6 +150,7 @@
                         </div>
                     </div>
                 </div>
+                 </a>
             @endforeach
             <div class="flex-center" style="height: 480px; width:320px">
                 <a href="" class="btn" style="font-size:3rem">

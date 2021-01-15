@@ -75,15 +75,14 @@ class GeneralHelper
         return Brand::take($n)->Orderby("click_count", "DESC")->get();
     }
 
-    static function get_related($brand, $category)
+    static function get_related($id, $brand, $category)
     {
-        $return = [];
-        $array = [];
         $collection = [];
 
         // Ones that share a brand and category
         $closest = Product::where('brands_id', $brand)
             ->where('categories_id', $category)
+            ->where('id', '!=', $id)
             ->orderBy('click_count', 'DESC')
             ->get();
 
@@ -93,34 +92,58 @@ class GeneralHelper
 
         // Ones that share a brand
         $brands = Product::where('brands_id', $brand)
+            ->where('id', '!=', $id)
             ->orderBy('click_count', 'DESC')
             ->get();
 
         foreach ($brands as $item) {
-            if (!in_array($item, $collection, true)) {
+            if (!in_array($item, $collection)) {
                 array_push($collection, $item);
             }
         }
 
         // Ones that share a category
         $categ = Product::where('categories_id', $category)
+            ->where('id', '!=', $id)
             ->orderBy('click_count', 'DESC')
             ->get();
 
         foreach ($categ as $item) {
-            if (!in_array($item, $collection, true)) {
+            if (!in_array($item, $collection)) {
                 array_push($collection, $item);
             }
         }
 
-        // Final array
+        if (count($collection) < 6) {
+            $item = count($collection);
+            $n = 6 - $item;
 
-        // foreach ($collection as $item) {
-        //     $array = [
-        //         'id' => $item,
-        //         'name'=>
-        //     ];
-        // }
+            $prods = Product::where('id', '!=', $id)
+                ->orderBy('click_count', 'DESC')
+                ->take($n)
+                ->get();
+
+            foreach ($prods as $item) {
+                if (!in_array($item, $collection)) {
+                    array_push($collection, $item);
+                }
+            }
+        }
+
+        return $collection;
+    }
+
+    static function get_display_image($id)
+    {
+        $img = DB::table('product_images')->where('products_id', $id)->pluck('storage_path')->first();
+        return $img;
+    }
+
+    static  function get_attribute($id)
+    {
+        $val = DB::table('product_attribute_values')->where('id', $id)->pluck('value')->first();
+        // dd($val);
+        return $val;
     }
 }
 //
