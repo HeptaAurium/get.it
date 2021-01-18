@@ -43,7 +43,7 @@ $allBrands = \App\Helpers\GeneralHelper::get_all_brands(10);
                         @foreach ($allBrands as $item)
                             <li class="ssb-li">
                                 <a href="{{ __('/brands/' . $item->name . '/' . $item->id . '') }}" class="w-100">
-                                    <img src="{{ config('settings.catalogue_url') . 'brands/' . $item->logo }}"
+                                    <img src="{{ config('settings.catalogue_url') . $item->logo }}"
                                         class="img-fluid" style="width:16px;">
                                     {{ $item->name }}
                                 </a>

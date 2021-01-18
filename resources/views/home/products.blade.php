@@ -71,8 +71,8 @@
                         </div>
                     </a>
                 @endforeach
-                <div class="flex-center" style="height: 480px; width:320px">
-                    <a href="" class="btn" style="font-size:3rem">
+                <div class="flex-center p-2" style="height: 480px; width:320px">
+                    <a href="" class="btn btn-primary rounded-circle" style="font-size:2rem;padding:3.4rem">
                         View More <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>

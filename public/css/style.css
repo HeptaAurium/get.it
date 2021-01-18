@@ -707,7 +707,7 @@ nav.search-side-bar.slide {
   overflow-x: hidden !important;
   -webkit-transition: 1s ease;
   transition: 1s ease;
-  min-width: 3520px;
+  width: 3100px;
   margin-left: -16px;
 }
 
@@ -956,9 +956,8 @@ nav.search-side-bar.slide {
   height: 20%;
 }
 
-.product-showcase .product-img-div .img-list img {
-  height: 160px;
-  width: 160px;
+.product-showcase .product-img-div .img-list a {
+  height: 100%;
 }
 
 .product-showcase .span-input {
@@ -1142,8 +1141,11 @@ nav.search-side-bar.slide {
     font-size: 1.8rem;
     top: 40%;
   }
-  .products-outer .products .prod .arrivals .card,
-  .products-outer .products .prod .picks .card {
+  .products-outer .products .arrivals,
+  .products-outer .products .picks {
+    width: 3100px !important;
+  }
+  .products-outer .products .prod .card {
     height: 410px !important;
   }
   .catalogue .display-4 {

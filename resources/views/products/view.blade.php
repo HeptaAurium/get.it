@@ -22,11 +22,11 @@
                                 style="background-image:url('{{ config('settings.catalogue_url') . $images[0]->storage_path }}')">
                             </div>
                             @if(count($images)>1)
-                            <div class="img-list list-inline row flex-row">
+                            <div class="img-list row flex-row">
                                 @foreach ($images as $item)
                                 @php $src= config('settings.catalogue_url') . $item->storage_path   @endphp
-                                <a href="" class="btn btn-change-disp" data-src={{$src}}>
-                                    <img src="{{$src}}" alt="" class="img-thumbnail">
+                                <a href="" class="btn btn-change-disp col" data-src={{$src}}>
+                                    <img src="{{$src}}" alt="" class="img-fluid h-100 w-auto    ">
                                 </a>
                                 @endforeach
                             </div>

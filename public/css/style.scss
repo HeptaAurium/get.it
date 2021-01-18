@@ -707,7 +707,7 @@ nav.search-side-bar.slide {
         .picks {
             overflow-x: hidden !important;
             transition: 1s ease;
-            min-width: 3520px;
+            width: 3100px;
             margin-left: -16px;
             // animation: slideLeft 1s;
 
@@ -893,10 +893,10 @@ nav.search-side-bar.slide {
 
         .img-list {
             height: 20%;
+            // overflow-x: scroll;
 
-            img {
-                height: 160px;
-                width: 160px;
+            a {
+                height: 100%;
             }
         }
     }
@@ -1116,7 +1116,7 @@ nav.search-side-bar.slide {
         }
     }
 
-.products-outer {
+    .products-outer {
         .prod-header {
             font-size: 1.8em;
         }
@@ -1135,13 +1135,14 @@ nav.search-side-bar.slide {
                 }
             }
 
-            .prod {
+            .arrivals,
+            .picks {
+                width: 3100px !important;
+            }
 
-                .arrivals,
-                .picks {
-                    .card {
-                        height: 410px !important;
-                    }
+            .prod {
+                .card {
+                    height: 410px !important;
                 }
             }
         }
@@ -1162,7 +1163,6 @@ nav.search-side-bar.slide {
             text-align: center !important;
         }
     }
-
 
 }
 
