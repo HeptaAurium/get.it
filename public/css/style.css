@@ -640,21 +640,17 @@ nav.search-side-bar.slide {
   position: relative;
 }
 
-.products {
+.products-outer {
   overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
-  margin: 0;
   background: #f1f1f1;
-  position: relative;
 }
 
-.products .prod-header {
+.products-outer .prod-header {
   font-family: 'Redressed', cursive;
   text-align: center;
 }
 
-.products .prod-header::after {
+.products-outer .prod-header::after {
   content: "";
   display: block;
   height: 16px;
@@ -665,13 +661,21 @@ nav.search-side-bar.slide {
   border-bottom-left-radius: 10px;
 }
 
-.products .prod-buttons {
+.products-outer .products {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  background: #f1f1f1;
+  position: relative;
+}
+
+.products-outer .products .prod-buttons {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.products .prod-buttons .btn-prod {
+.products-outer .products .prod-buttons .btn-prod {
   position: absolute;
   top: 30%;
   font-size: 3.5rem;
@@ -685,21 +689,21 @@ nav.search-side-bar.slide {
   cursor: pointer;
 }
 
-.products .prod-buttons .btn-prod:hover {
+.products-outer .products .prod-buttons .btn-prod:hover {
   -webkit-animation: shake 1s;
           animation: shake 1s;
 }
 
-.products .prod-buttons .prodNext {
+.products-outer .products .prod-buttons .prodNext {
   right: 0;
 }
 
-.products .prod-buttons .prodPrev {
+.products-outer .products .prod-buttons .prodPrev {
   left: 0;
 }
 
-.products .arrivals,
-.products .picks {
+.products-outer .products .arrivals,
+.products-outer .products .picks {
   overflow-x: hidden !important;
   -webkit-transition: 1s ease;
   transition: 1s ease;
@@ -707,8 +711,8 @@ nav.search-side-bar.slide {
   margin-left: -16px;
 }
 
-.products .arrivals .card,
-.products .picks .card {
+.products-outer .products .arrivals .card,
+.products-outer .products .picks .card {
   border: none;
   outline: none;
   border-radius: 16px;
@@ -727,8 +731,8 @@ nav.search-side-bar.slide {
   margin: 10px auto;
 }
 
-.products .arrivals .card:hover,
-.products .picks .card:hover {
+.products-outer .products .arrivals .card:hover,
+.products-outer .products .picks .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-transition: -webkit-transform .3s;
@@ -739,8 +743,8 @@ nav.search-side-bar.slide {
           box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
-.products .arrivals .card .product,
-.products .picks .card .product {
+.products-outer .products .arrivals .card .product,
+.products-outer .products .picks .card .product {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -749,30 +753,30 @@ nav.search-side-bar.slide {
   border-radius: 16px;
 }
 
-.products .arrivals .card .product .info,
-.products .arrivals .card .product .cost,
-.products .picks .card .product .info,
-.products .picks .card .product .cost {
+.products-outer .products .arrivals .card .product .info,
+.products-outer .products .arrivals .card .product .cost,
+.products-outer .products .picks .card .product .info,
+.products-outer .products .picks .card .product .cost {
   position: relative;
   top: 60%;
 }
 
-.products .arrivals .card .product .prod-name,
-.products .picks .card .product .prod-name {
+.products-outer .products .arrivals .card .product .prod-name,
+.products-outer .products .picks .card .product .prod-name {
   padding: 10px auto;
   font-family: 'Lobster', cursive;
   font-size: 2rem;
 }
 
-.products .arrivals .btn-link,
-.products .picks .btn-link {
+.products-outer .products .arrivals .btn-link,
+.products-outer .products .picks .btn-link {
   padding: 10px;
   font-size: 2.4rem;
   float: inline-end;
 }
 
-.products .arrivals .prod,
-.products .picks .prod {
+.products-outer .products .arrivals .prod,
+.products-outer .products .picks .prod {
   width: 320px;
   margin: 5px 16px;
 }
@@ -1123,14 +1127,24 @@ nav.search-side-bar.slide {
   .welcome-nav a.btn.right .fab {
     font-size: 1.4rem;
   }
-  .products .prod-header {
+  .products-outer .prod-header {
     font-size: 1.8em;
   }
-  .products .prod-buttons .btn-prod {
+  .products-outer .products {
+    overflow-x: scroll !important;
+  }
+  .products-outer .products .prod-buttons {
+    display: none;
+  }
+  .products-outer .products .prod-buttons .btn-prod {
     width: 3.5rem;
     height: 3.5rem;
     font-size: 1.8rem;
     top: 40%;
+  }
+  .products-outer .products .prod .arrivals .card,
+  .products-outer .products .prod .picks .card {
+    height: 410px !important;
   }
   .catalogue .display-4 {
     font-size: 1.8rem;

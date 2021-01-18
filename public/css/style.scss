@@ -640,13 +640,9 @@ nav.search-side-bar.slide {
     }
 }
 
-.products {
+.products-outer {
     overflow: hidden;
-    width: 100%;
-    padding: 20px 0;
-    margin: 0;
     background: rgb(241, 241, 241);
-    position: relative;
 
     .prod-header {
         font-family: 'Redressed', cursive;
@@ -664,103 +660,114 @@ nav.search-side-bar.slide {
         }
     }
 
-    .prod-buttons {
-        position: absolute;
+    .products {
+        overflow-x: hidden;
         width: 100%;
-        height: 100%;
-        // background: red;
+        // padding: 20px 0;
+        margin: 0;
+        background: rgb(241, 241, 241);
+        position: relative;
 
-        .btn-prod {
+
+
+        .prod-buttons {
             position: absolute;
-            top: 30%;
-            font-size: 3.5rem;
-            font-weight: 400;
-            background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 50%;
-            height: 5rem;
-            width: 5rem;
-            color: #fff;
-            z-index: 100;
-            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            // background: red;
 
-            &:hover {
-                animation: shake 1s;
-            }
-        }
-
-        .prodNext {
-            right: 0;
-        }
-
-        .prodPrev {
-            left: 0;
-        }
-    }
-
-    .arrivals,
-    .picks {
-        overflow-x: hidden !important;
-        transition: 1s ease;
-        min-width: 3520px;
-        margin-left: -16px;
-        // animation: slideLeft 1s;
-
-
-        .card {
-            border: none;
-            outline: none;
-            border-radius: 16px;
-            height: 480px;
-            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-            padding: 0 0 10px 0 !important;
-            background: #949596;
-            color: #fff;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: scroll !important;
-            position: relative;
-            margin: 10px auto;
-
-            &:hover {
-                transform: translateY(-5px);
-                transition: transform .3s;
-                box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
-            }
-
-            .product {
+            .btn-prod {
                 position: absolute;
-                height: 100%;
-                width: 100%;
-                background: rgba(0, 0, 0, 0.4);
-                padding: 20px;
-                border-radius: 16px;
+                top: 30%;
+                font-size: 3.5rem;
+                font-weight: 400;
+                background-color: rgba(0, 0, 0, 0.4);
+                border-radius: 50%;
+                height: 5rem;
+                width: 5rem;
+                color: #fff;
+                z-index: 100;
+                cursor: pointer;
 
-
-                .info,
-                .cost {
-                    position: relative;
-                    top: 60%;
+                &:hover {
+                    animation: shake 1s;
                 }
+            }
 
-                .prod-name {
-                    padding: 10px auto;
-                    font-family: 'Lobster', cursive;
-                    font-size: 2rem;
-                }
+            .prodNext {
+                right: 0;
+            }
+
+            .prodPrev {
+                left: 0;
             }
         }
 
-        .btn-link {
-            padding: 10px;
-            font-size: 2.4rem;
-            float: inline-end;
-        }
+        .arrivals,
+        .picks {
+            overflow-x: hidden !important;
+            transition: 1s ease;
+            min-width: 3520px;
+            margin-left: -16px;
+            // animation: slideLeft 1s;
 
-        .prod {
-            width: 320px;
-            margin: 5px 16px;
+
+            .card {
+                border: none;
+                outline: none;
+                border-radius: 16px;
+                height: 480px;
+                box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                padding: 0 0 10px 0 !important;
+                background: #949596;
+                color: #fff;
+                background-size: cover !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-attachment: scroll !important;
+                position: relative;
+                margin: 10px auto;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    transition: transform .3s;
+                    box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.4);
+                }
+
+                .product {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.4);
+                    padding: 20px;
+                    border-radius: 16px;
+
+
+                    .info,
+                    .cost {
+                        position: relative;
+                        top: 60%;
+                    }
+
+                    .prod-name {
+                        padding: 10px auto;
+                        font-family: 'Lobster', cursive;
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .btn-link {
+                padding: 10px;
+                font-size: 2.4rem;
+                float: inline-end;
+            }
+
+            .prod {
+                width: 320px;
+                margin: 5px 16px;
+            }
         }
     }
 }
@@ -1109,21 +1116,33 @@ nav.search-side-bar.slide {
         }
     }
 
-
-    .products {
-
+.products-outer {
         .prod-header {
             font-size: 1.8em;
         }
 
+        .products {
+            overflow-x: scroll !important;
 
-        .prod-buttons {
+            .prod-buttons {
+                display: none;
 
-            .btn-prod {
-                width: 3.5rem;
-                height: 3.5rem;
-                font-size: 1.8rem;
-                top: 40%;
+                .btn-prod {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    font-size: 1.8rem;
+                    top: 40%;
+                }
+            }
+
+            .prod {
+
+                .arrivals,
+                .picks {
+                    .card {
+                        height: 410px !important;
+                    }
+                }
             }
         }
     }
