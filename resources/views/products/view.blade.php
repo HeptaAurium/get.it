@@ -14,22 +14,22 @@
             <div class="container">
                 <div class="row">
                     @csrf
-                    <input type="hidden" name="" id="product_id" value="{{$product->id}}">
+                    <input type="hidden" name="" id="product_id" value="{{ $product->id }}">
                     <input type="hidden" name="" id="guest" value="@guest 1 @else 0 @endguest">
                     <div class="col-md-6 bg-transparent">
                         <div class="product-img-div p-0 m-0">
                             <div class="display-img" id="display-img"
                                 style="background-image:url('{{ config('settings.catalogue_url') . $images[0]->storage_path }}')">
                             </div>
-                            @if(count($images)>1)
-                            <div class="img-list row flex-row">
-                                @foreach ($images as $item)
-                                @php $src= config('settings.catalogue_url') . $item->storage_path   @endphp
-                                <a href="" class="btn btn-change-disp col" data-src={{$src}}>
-                                    <img src="{{$src}}" alt="" class="img-fluid h-100 w-auto    ">
-                                </a>
-                                @endforeach
-                            </div>
+                            @if (count($images) > 1)
+                                <div class="img-list row flex-row">
+                                    @foreach ($images as $item)
+                                        @php $src= config('settings.catalogue_url') . $item->storage_path @endphp
+                                        <a href="" class="btn btn-change-disp col" data-src={{ $src }}>
+                                            <img src="{{ $src }}" alt="" class="img-fluid h-100 w-auto    ">
+                                        </a>
+                                    @endforeach
+                                </div>
                             @endif
                         </div>
                     </div>
@@ -37,10 +37,10 @@
                     <div class="col-md-6 pt-md-4 pl-md-3">
                         <h1 class="display-3 font-weight-bold mb-2 ">{{ $product->name }}</h1>
                         <h4 class="font-weight-bolder my-2">
-                            {{ config('settings.currency') . ' ' . number_format($low) }}
-                            <sup><del>{{ number_format($high) }}</del></sup>
+                            <span class="text-small">{{ config('settings.currency') . ' ' . number_format($low) }} </span>
+                            <sup class="text-smaller"><del>{{ number_format($high) }}</del></sup>
                             &nbsp;&nbsp;&nbsp;
-                            <span class="text-success">Save {{ round($perc, 2) }}%</span>
+                            <span class="text-success text-smaller">Save {{ round($perc, 2) }}%</span>
                         </h4>
 
                         <div class="stars text-left my-2">
@@ -94,8 +94,9 @@
                             <div class="p-2 row h-auto">
                                 @foreach ($colors as $it)
                                     <div class="col-3">
-                                        <span class="span-colors @if($it['hex'] != '#fff') text-white @endif flex-center m-2" style="background:{{$it['hex']}};" data-color="{{$it['id']}}">
-                                        {{ ucfirst($it['name']) }}
+                                        <span class="span-colors @if ($it['hex'] !='#fff' ) text-white @endif flex-center m-2"
+                                            style="background:{{ $it['hex'] }};" data-color="{{ $it['id'] }}">
+                                            {{ ucfirst($it['name']) }}
                                         </span>
                                         <input type="hidden" id="inp-color" value="">
                                     </div>
@@ -110,11 +111,15 @@
                                         <input id="quantity" class="form-control" type="number" name="" min="0" value="1">
                                     </div>
                                     <div class="col-6">
-                                        <input id="quantification" class="form-control" type="text" name="" min="0" value="{{ucfirst(\App\Helpers\GeneralHelper::get_attribute($product->quantification ))}}" readonly>
+                                        <input id="quantification" class="form-control" type="text" name="" min="0"
+                                            value="{{ ucfirst(\App\Helpers\GeneralHelper::get_attribute($product->quantification)) }}"
+                                            readonly>
                                     </div>
                                 </div>
                                 <div class="col-11 mx-auto my-3">
-                                    <button class="btn btn-lg btn-block" style="background: orangered;color:#fff" id="btnAddCart"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart</button>
+                                    <button class="btn btn-lg btn-block" style="background: orangered;color:#fff"
+                                        id="btnAddCart"> <i class="fa fa-cart-plus" aria-hidden="true"></i> Add to
+                                        Cart</button>
                                 </div>
                             </div>
                         </div>

@@ -11,6 +11,14 @@ body {
   padding-bottom: 2rem !important;
 }
 
+.text-small {
+  font-size: 80%;
+}
+
+.text-smaller {
+  font-size: 50%;
+}
+
 .navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler span,
@@ -1006,6 +1014,32 @@ nav.search-side-bar.slide {
 
 .site-footer.slide {
   margin-left: 0 !important;
+}
+
+.cart {
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  top: 80px;
+}
+
+.cart .ul-cart {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart .ul-cart li {
+  border-radius: 10px;
+  background-color: lightgrey;
+  margin: 10px auto;
+  height: 240px;
+}
+
+.cart .ul-cart li .left {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
 }
 
 @media (max-width: 1024px) {
