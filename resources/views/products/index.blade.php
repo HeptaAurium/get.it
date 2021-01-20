@@ -9,7 +9,7 @@
                 <h2 class="display-4 col-12 p-4">Most Popular Products <span class="float-right text-small"><a href="">View
                             More</a></span> </h2>
                 @foreach ($picks as $item)
-                    <div class="card col-6 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php
@@ -75,7 +75,7 @@
             <div class="row justify-content-between shop p-2 px-3">
                 <h2 class="display-4 col-12 p-4"> Highest Rated Products</h2>
                 @foreach ($rated as $item)
-                    <div class="card col-6 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php
@@ -140,7 +140,7 @@
             {{-- <hr style="width:90%;margin:1rem auto;border-top:1px solid #ddd;"> --}}  <div class="row justify-content-between shop p-2 px-3">
                 <h2 class="display-4 col-12 p-4"> New Arrivals  </h2>
                 @foreach ($arrivals as $item)
-                    <div class="card col-6 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php

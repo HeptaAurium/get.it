@@ -26,7 +26,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::get('move_images', [CronController::class, 'move_images']);
-Route::get('products/{name}/{id}', [HomeController::class, 'view']);
+
 Route::resource('orders', OrdersController::class);
 Route::get('/items/in/cart', [OrdersController::class, 'cart_count']);
 
@@ -34,5 +34,6 @@ Route::resource('/cart', CartsController::class);
 
 Route::prefix('products')->group(function () {
     Route::get('/', [ProductsController::class, 'index']);
+    Route::get('/{name}/{id}', [HomeController::class, 'view']);
 });
 
