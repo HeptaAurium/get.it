@@ -43,10 +43,12 @@ class CartsController extends Controller
             $array = [
                 'name' => isset($products['name']) ?$products['name'] : 'Undefined',
                 'size' => $otu[2],
-                'color' => $color,
+                'color' => $color->value,
+                'hex' => $color->hex_val,
                 'img'=>DB::table('product_images')->where('products_id', $otu[0])->pluck('storage_path')->first(),
                 'quantity'=>$order->quantity . " ". ucfirst(DB::table('product_attribute_values')->where('id', $products->quantification)->pluck('value')->first()),
                 'price'=>$products->discount_price,
+
             ];
 
             array_push($data['orders'], $array);

@@ -685,13 +685,13 @@ nav.search-side-bar.slide {
 
 .products-outer .products .prod-buttons .btn-prod {
   position: absolute;
-  top: 30%;
-  font-size: 3.5rem;
+  top: 40%;
+  font-size: 2.8rem;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   color: #fff;
   z-index: 100;
   cursor: pointer;
@@ -1016,30 +1016,26 @@ nav.search-side-bar.slide {
   margin-left: 0 !important;
 }
 
-.cart {
-  position: fixed;
-  height: 100vh;
-  overflow-y: auto;
-  top: 80px;
-}
-
-.cart .ul-cart {
+.ul-cart {
   list-style-type: none;
   padding: 0;
 }
 
-.cart .ul-cart li {
+.ul-cart li {
   border-radius: 10px;
-  background-color: lightgrey;
-  margin: 10px auto;
   height: 240px;
 }
 
-.cart .ul-cart li .left {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: center center;
+.ul-cart li h2,
+.ul-cart li p {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.ul-cart li h2 {
+  font-size: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -1173,7 +1169,7 @@ nav.search-side-bar.slide {
     width: 3.5rem;
     height: 3.5rem;
     font-size: 1.8rem;
-    top: 40%;
+    top: 60%;
   }
   .products-outer .products .arrivals,
   .products-outer .products .picks {

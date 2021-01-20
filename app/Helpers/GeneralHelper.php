@@ -62,6 +62,30 @@ class GeneralHelper
 
         return count($cart);
     }
+    static function items_in_cart_price()
+    {
+        $price = 0;
+        if (Auth::check()) {
+            $cart = Order::where('users_id', Auth::id())
+                ->where('checked_out', 0)
+                ->get();
+        } else {
+            $cart = GuestOrder::where('ip_address', self::getIp())
+                // ->where('checked_out', 0)
+                ->get();
+        }
+
+        foreach ($cart as $item) {
+            $otu = explode('|', $item->partial_otu);
+
+            $pri = Product::where('id', $otu[0])
+                ->pluck('discount_price')
+                ->first();
+            $price += ($pri * $item->quantity);
+        }
+
+        return $price;
+    }
     static function getIp()
     {
         return Request()->ip();
