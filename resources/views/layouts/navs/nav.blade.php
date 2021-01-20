@@ -129,7 +129,7 @@
 
         </div>
         <div class="statics d-none d-md-flex">
-            <a href="{{ $cart }}" class="btn btn-transparent btn-statics" id="top-cart">
+            <a href="/cart" class="btn btn-transparent btn-statics" id="top-cart">
                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                 <span
                     class="badge badge-secondary cart-count">{{ \App\Helpers\GeneralHelper::items_in_cart_count() }}</span>

@@ -24,7 +24,7 @@ class CartsController extends Controller
         $data['orders'] = [];
 
         if (Auth::check()) {
-            $orders = Order::where('id', Auth::User()->id)
+            $orders = Order::where('users_id', Auth::User()->id)
                 ->where('checked_out', 0)
                 ->get();
         } else {

@@ -62,7 +62,7 @@
                                     cupiditate suscipit commodi ipsam, rem illum necessitatibus atque, qui perferendis
                                     laboriosam eum nesciunt reprehenderit? Id nostrum iusto eligendi quidem.
                                 </P>
-                                <button class="btn btn-lg">Get Started</button>
+                                <a href="products/" class="btn btn-lg">Get Started</a>
                             </div>
                         </div>
                     </div>

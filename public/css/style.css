@@ -11,6 +11,11 @@ body {
   padding-bottom: 2rem !important;
 }
 
+.btn-orangered {
+  background-color: orangered;
+  color: #fff;
+}
+
 .text-small {
   font-size: 80%;
 }
@@ -597,7 +602,7 @@ nav.search-side-bar.slide {
   font-size: 16px;
 }
 
-.showcase-universal .showcase-outer .showcase .content button {
+.showcase-universal .showcase-outer .showcase .content a.btn {
   background: orangered;
   border-radius: 20px;
   margin-top: 50px;
@@ -1038,6 +1043,43 @@ nav.search-side-bar.slide {
   font-size: 30px;
 }
 
+.shop .card {
+  border: none;
+  outline: none;
+  height: 480px;
+  cursor: pointer;
+  padding: 0 !important;
+  background: #949596;
+  color: #fff;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  position: relative;
+  margin: 10px auto;
+}
+
+.shop .card .shop-footer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.shop .card .shop-footer .info,
+.shop .card .shop-footer .cost {
+  position: relative;
+  top: 40%;
+}
+
+.shop .card .shop-footer .prod-name {
+  padding: 10px auto;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+
 @media (max-width: 1024px) {
   .showcase-outer .showcase .content {
     position: relative;
@@ -1209,6 +1251,22 @@ nav.search-side-bar.slide {
   }
   .indicators {
     display: none !important;
+  }
+  .shop h2.display-4 {
+    font-size: 1.2rem;
+  }
+  .shop h2.display-4 a {
+    font-size: .9rem;
+  }
+  .shop .card {
+    height: 320px !important;
+  }
+  .shop .card .info,
+  .shop .card .cost {
+    top: 10% !important;
+  }
+  .shop .card .card-footer .prod-name {
+    font-size: 1.2rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

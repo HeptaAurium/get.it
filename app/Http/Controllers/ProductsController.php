@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,13 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        //
+        $data = [];
+        $data['arrivals'] = Product::take(8)->orderBy('id', 'DESC')->get();
+        $data['picks'] = Product::take(8)->orderBy('click_count', 'DESC')->get();
+        $data['categories'] = Category::orderBy('click_count', 'DESC')->get();
+        $data['rated'] = Product::take(8)->orderBy('rating', 'DESC')->get();
+
+        return view('products.index', $data);
     }
 
     /**

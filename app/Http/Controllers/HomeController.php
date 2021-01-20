@@ -36,6 +36,10 @@ class HomeController extends Controller
     {
         $data = [];
         $product = Product::where('id', $id)->first();
+        $product->click_count += 1;
+        $product->save();
+
+        $product = Product::where('id', $id)->first();
         $colors = $product->colors;
         $colors = explode(',', $colors);
         $data['colors'] = [];

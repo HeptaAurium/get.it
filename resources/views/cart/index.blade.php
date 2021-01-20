@@ -32,7 +32,9 @@
                                             <a class="btn rounded-circle ml-1"
                                                 style="background:{{ $item['hex'] }};padding:.5rem;margin-top: -4px;"></a>
                                         </p>
+                                        @if ($item['size'] != 0)
                                         <p clas="text-small">Size: <span>{{ $item['size'] }}</span></p>
+                                        @endif
 
                                     </div>
                                     <div class="col-12 ">

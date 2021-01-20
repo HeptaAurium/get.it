@@ -6,8 +6,7 @@
     <div class="container-fluid px-2">
         <div class="row">
             @foreach ($related as $item)
-
-                <div class="col-md-4 col-lg-3 border rounded p-3">
+                <div class="col-md-4 mb-2 border rounded p-3">
                     <img src="{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}"
                         alt="" class="img-fluid">
                     <div class="related-text text-center my-2">

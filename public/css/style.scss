@@ -11,6 +11,12 @@ body {
     padding-bottom: 2rem !important;
 }
 
+.btn-orangered {
+    background-color: orangered;
+    color: #fff;
+
+}
+
 .text-small {
     font-size: 80%;
 }
@@ -586,7 +592,7 @@ nav.search-side-bar.slide {
                     font-size: 16px;
                 }
 
-                button {
+                a.btn {
                     background: orangered;
                     border-radius: 20px;
                     margin-top: 50px;
@@ -992,6 +998,50 @@ nav.search-side-bar.slide {
     }
 }
 
+// Shop
+.shop {
+    .card {
+        border: none;
+        outline: none;
+        // border-radius: 16px ;
+        height: 480px;
+        // box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        padding: 0 !important;
+        background: #949596;
+        color: #fff;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        position: relative;
+        margin: 10px auto;
+
+
+        .shop-footer {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 16px;
+
+            .info,
+            .cost {
+                position: relative;
+                top: 40%;
+            }
+
+            .prod-name {
+                padding: 10px auto;
+                font-family: 'Lobster', cursive;
+                font-size: 2rem;
+            }
+        }
+    }
+
+}
+
 
 @media (max-width:1024px) {
     .showcase-outer {
@@ -1237,6 +1287,31 @@ nav.search-side-bar.slide {
 
     .indicators {
         display: none !important;
+    }
+
+    .shop {
+        h2.display-4 {
+            font-size: 1.2rem;
+
+            a{
+                font-size: .9rem;
+            }
+        }
+
+        .card {
+            height: 320px !important;
+
+            .info,
+            .cost {
+                top: 10% !important;
+            }
+
+            .card-footer {
+                .prod-name {
+                    font-size: 1.2rem !important;
+                }
+            }
+        }
     }
 
 

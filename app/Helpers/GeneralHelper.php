@@ -51,12 +51,13 @@ class GeneralHelper
     static function items_in_cart_count()
     {
         if (Auth::check()) {
-            $cart = Order::where('users_id', Auth::id())
+            $cart = Order::where('users_id', Auth::User()->id)
                 ->where('checked_out', 0)
                 ->get();
+
         } else {
             $cart = GuestOrder::where('ip_address', self::getIp())
-                // ->where('checked_out', 0)
+                ->where('transferred', 0)
                 ->get();
         }
 
@@ -71,7 +72,7 @@ class GeneralHelper
                 ->get();
         } else {
             $cart = GuestOrder::where('ip_address', self::getIp())
-                // ->where('checked_out', 0)
+                ->where('transferred', 0)
                 ->get();
         }
 
