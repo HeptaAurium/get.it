@@ -5,11 +5,11 @@
     @include('layouts.navs.sidepanel')
     <div class="clear-left mt-4">
         <div class="container-fluid px-2">
-            <div class="row justify-content-between shop p-2 px-3">
+            <div class="row shop p-2 px-3">
                 <h2 class="display-4 col-12 p-4">Most Popular Products <span class="float-right text-small"><a href="">View
                             More</a></span> </h2>
                 @foreach ($picks as $item)
-                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-md-4 offset-md-1 mx-auto bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php
@@ -32,7 +32,7 @@
                                     <span class='text-white-50 d-none d-md-block'>
                                         <del>{{ config('settings.currency') . ' ' . number_format($high) }}</del>
                                     </span>
-                                    <span class="font-weight-bolder text-white price" style="font-size:1.3rem;">
+                                    <span class="font-weight-bolder text-white price" >
                                         {{ config('settings.currency') . ' ' . number_format($low) }}
                                     </span>
                                     <span class="font-italic text-white-50 d-none d-md-block">Save
@@ -72,10 +72,10 @@
                 @endforeach
             </div>
             {{-- <hr style="width:90%;margin:1rem auto;border-top:1px solid #ddd;"> --}}
-            <div class="row justify-content-between shop p-2 px-3">
+            <div class="row shop p-2 px-3">
                 <h2 class="display-4 col-12 p-4"> Highest Rated Products</h2>
                 @foreach ($rated as $item)
-                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-md-4 offset-md-1 mx-auto bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php
@@ -98,7 +98,7 @@
                                     <span class='text-white-50 d-none d-md-block'>
                                         <del>{{ config('settings.currency') . ' ' . number_format($high) }}</del>
                                     </span>
-                                    <span class="font-weight-bolder text-white price" style="font-size:1.3rem;">
+                                    <span class="font-weight-bolder text-white price" >
                                         {{ config('settings.currency') . ' ' . number_format($low) }}
                                     </span>
                                     <span class="font-italic text-white-50 d-none d-md-block">Save
@@ -137,10 +137,10 @@
                     </div>
                 @endforeach
             </div>
-            {{-- <hr style="width:90%;margin:1rem auto;border-top:1px solid #ddd;"> --}}  <div class="row justify-content-between shop p-2 px-3">
+            {{-- <hr style="width:90%;margin:1rem auto;border-top:1px solid #ddd;"> --}}  <div class="row shop p-2 px-3">
                 <h2 class="display-4 col-12 p-4"> New Arrivals  </h2>
                 @foreach ($arrivals as $item)
-                    <div class="card col-12 col-md-4 col-lg-3 bg-light mb-2 border rounded p-3"
+                    <div class="card col-md-4 offset-md-1 mx-auto bg-light mb-2 border rounded p-3"
                         style="background:url('{{ config('settings.catalogue_url') . \App\Helpers\GeneralHelper::get_display_image($item->id) }}')">
                         <div class="shop-footer rounded text-center">
                             @php
@@ -163,7 +163,7 @@
                                     <span class='text-white-50 d-none d-md-block'>
                                         <del>{{ config('settings.currency') . ' ' . number_format($high) }}</del>
                                     </span>
-                                    <span class="font-weight-bolder text-white price" style="font-size:1.3rem;">
+                                    <span class="font-weight-bolder text-white price" >
                                         {{ config('settings.currency') . ' ' . number_format($low) }}
                                     </span>
                                     <span class="font-italic text-white-50 d-none d-md-block">Save

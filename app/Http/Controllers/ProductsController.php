@@ -16,10 +16,10 @@ class ProductsController extends Controller
     public function index()
     {
         $data = [];
-        $data['arrivals'] = Product::take(8)->orderBy('id', 'DESC')->get();
-        $data['picks'] = Product::take(8)->orderBy('click_count', 'DESC')->get();
+        $data['arrivals'] = Product::take(9)->orderBy('id', 'DESC')->get();
+        $data['picks'] = Product::take(9)->orderBy('click_count', 'DESC')->get();
         $data['categories'] = Category::orderBy('click_count', 'DESC')->get();
-        $data['rated'] = Product::take(8)->orderBy('rating', 'DESC')->get();
+        $data['rated'] = Product::take(9)->orderBy('rating', 'DESC')->get();
 
         return view('products.index', $data);
     }

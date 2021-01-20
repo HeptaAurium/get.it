@@ -6,7 +6,7 @@
     <div class="clear-left mt-4">
         <div class="container-fluid py-2 px-3">
             <div class="row justify-content-around bg-light px-2">
-                <div class="col-sm-11 col-md-6 rounded">
+                <div class="col-sm-11 col-lg-6 rounded">
                     <ul class="ul-cart">
                         @foreach ($orders as $item)
                             @php
@@ -29,7 +29,7 @@
                                     </div>
                                     <div class="col-6">
                                         <p clas="text-small">Color: <span>{{ $item['color'] }}</span>
-                                            <a class="btn rounded-circle ml-1"
+                                            <a class="btn rounded-circle ml-sm-1"
                                                 style="background:{{ $item['hex'] }};padding:.5rem;margin-top: -4px;"></a>
                                         </p>
                                         @if ($item['size'] != 0)
@@ -57,7 +57,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-sm-11 col-md-6 rounded p-3">
+                <div class="col-sm-11 col-lg-6 rounded p-3">
                     <div style="background: #ddd;min-height: 500px;position:sticky;top:80px;" class="rounded p-3">
                         <table class="table mb-0 table-borderless">
                             <tbody>

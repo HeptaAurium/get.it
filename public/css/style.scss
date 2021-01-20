@@ -1000,6 +1000,14 @@ nav.search-side-bar.slide {
 
 // Shop
 .shop {
+    h2.display-4 {
+        font-size: 2rem;
+
+        a {
+            font-size: 1.6rem;
+        }
+    }
+
     .card {
         border: none;
         outline: none;
@@ -1022,7 +1030,7 @@ nav.search-side-bar.slide {
             position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.2);
             padding: 20px;
             border-radius: 16px;
 
@@ -1117,7 +1125,7 @@ nav.search-side-bar.slide {
 
 @media (max-width:576px) {
     .top-menu {
-        height: 100px !important;
+        height: 52px !important;
 
         .navbar-collapse {
             background: #e9e9e9;
@@ -1257,6 +1265,20 @@ nav.search-side-bar.slide {
         }
     }
 
+    .top-menu {
+        .statics {
+            .fa {
+                font-size: 19px !important;
+            }
+        }
+
+        #top-cart {
+            .badge {
+                font-size: 10px;
+            }
+        }
+    }
+
 }
 
 @media (max-width:400px) {
@@ -1293,7 +1315,7 @@ nav.search-side-bar.slide {
         h2.display-4 {
             font-size: 1.2rem;
 
-            a{
+            a {
                 font-size: .9rem;
             }
         }
@@ -1303,7 +1325,7 @@ nav.search-side-bar.slide {
 
             .info,
             .cost {
-                top: 10% !important;
+                top: 34% !important;
             }
 
             .card-footer {

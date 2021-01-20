@@ -1,41 +1,32 @@
 <div class="container">
     <nav class="navbar navbar-expand-md navbar-light top-menu" style=" background: #eeeeee;z-index:1">
-        <div class="col-12 d-block d-md-none text-center">
-            <h1 class="display-4 logo-text">{{config('app.name')}}  </h1>
+        <div class="logo d-none d-md-block" style="height: 50px">
+            <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid h-100" >
         </div>
-        <div class="logo" style="height:50px">
-            <a class="navbar-brand h-100" href="/">
-                <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid h-100">
-            </a>
-        </div>
-        @auth
-            @php
-            $cart = "/view-cart/1";
-            @endphp
-        @else
-            @php
-            $cart = "/view-cart/2";
-            @endphp
-        @endauth
-        <div class="statics d-block d-md-none">
-            <a href="/cart" class="btn btn-transparent btn-statics" id="top-cart">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                <span
-                    class="badge badge-secondary cart-count">{{ \App\Helpers\GeneralHelper::items_in_cart_count() }}</span>
-            </a>
-            <button class="btn btn-transparent btn-statics btn-statics-small" id="top-search" data-toggle="modal"
-                data-target="#search-modal">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-            <button class="btn btn-transparent btn-statics btn-statics-small btn-top-menu" id="top-menu">
-                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        <div class="col-12 d-flex flex-row align-items-center px-1 d-md-none text-center">
+            <div class="d-flex flex-row align-items-center">
+                <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid" style="height:40px;">
+                <h1 class="display-4 logo-text col">{{ config('app.name') }} </h1>
+            </div>
+            <div class="statics ml-auto">
+                <a href="/cart" class="btn btn-transparent btn-statics" id="top-cart">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span
+                        class="badge badge-secondary cart-count">{{ \App\Helpers\GeneralHelper::items_in_cart_count() }}</span>
+                </a>
+                <button class="btn btn-transparent btn-statics btn-statics-small" id="top-search" data-toggle="modal"
+                    data-target="#search-modal">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-transparent btn-statics btn-statics-small btn-top-menu" id="top-menu">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                </button>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
             </button>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ml-auto text-right">
                 <li class="nav-item dropdown">
@@ -188,7 +179,7 @@
             </a>
         </div>
         <div class="prof-pic-captions text-center">
-            <h6>{{ Auth::User()->fname ." " . Auth::User()->lname }}</h6>
+            <h6>{{ Auth::User()->fname . ' ' . Auth::User()->lname }}</h6>
             <p>{{ Auth::User()->pno }}</p>
         </div>
 
@@ -209,8 +200,8 @@
                     </li>
                     <li>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();" data-toggle="tooltip"
-                            title="Log out">
+                                                        document.getElementById('logout-form').submit();"
+                            data-toggle="tooltip" title="Log out">
                             <i class="fa fa-sign-out"></i></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
