@@ -68,7 +68,7 @@ $allBrands = \App\Helpers\GeneralHelper::get_all_brands(10);
                     @endif
 
                 </ul>
-                <h6><a href="#" class="btn">Explore More products</a></h6>
+                <h6><a href="/products" class="btn">Explore More products</a></h6>
             </li>
         </ul>
     </div>

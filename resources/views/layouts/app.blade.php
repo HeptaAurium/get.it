@@ -17,11 +17,13 @@
 <body>
     <div id="app">
         <main class="main">
+            @include('flash::message')
             @include('layouts.navs.nav')
             @yield('content')
         </main>
     </div>
     @include('layouts.extras.js')
+    @include('layouts.navs.footer')
 
 </body>
 

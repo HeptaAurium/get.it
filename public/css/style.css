@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 .padding {
   padding-bottom: 2rem !important;
 }

@@ -53,11 +53,13 @@ class GeneralHelper
         if (Auth::check()) {
             $cart = Order::where('users_id', Auth::User()->id)
                 ->where('checked_out', 0)
+                ->where('active', 1)
                 ->get();
 
         } else {
             $cart = GuestOrder::where('ip_address', self::getIp())
                 ->where('transferred', 0)
+                ->where('active', 1)
                 ->get();
         }
 
@@ -69,10 +71,12 @@ class GeneralHelper
         if (Auth::check()) {
             $cart = Order::where('users_id', Auth::id())
                 ->where('checked_out', 0)
+                ->where('active', 1)
                 ->get();
         } else {
             $cart = GuestOrder::where('ip_address', self::getIp())
                 ->where('transferred', 0)
+                ->where('active', 1)
                 ->get();
         }
 

@@ -1,13 +1,17 @@
 <div class="container">
     <nav class="navbar navbar-expand-md navbar-light top-menu" style=" background: #eeeeee;z-index:1">
         <div class="logo d-none d-md-block" style="height: 50px">
-            <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid h-100" >
+            <a href="/">
+                <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid h-100">
+            </a>
         </div>
         <div class="col-12 d-flex flex-row align-items-center px-1 d-md-none text-center">
-            <div class="d-flex flex-row align-items-center">
-                <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid" style="height:40px;">
-                <h1 class="display-4 logo-text col">{{ config('app.name') }} </h1>
-            </div>
+            <a href="/" class="btn">
+                <div class="d-flex flex-row align-items-center">
+                    <img src="{{ asset('img/icons/logo-clear.png') }}" alt="" class="img-fluid" style="height:40px;">
+                    <h1 class="display-4 logo-text col">{{ config('app.name') }} </h1>
+                </div>
+            </a>
             <div class="statics ml-auto">
                 <a href="/cart" class="btn btn-transparent btn-statics" id="top-cart">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -200,7 +204,7 @@
                     </li>
                     <li>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();"
+                                                                    document.getElementById('logout-form').submit();"
                             data-toggle="tooltip" title="Log out">
                             <i class="fa fa-sign-out"></i></a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
